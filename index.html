@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kleber Nunes Inacio | Cloud Architect Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Kleber Nunes Inacio</h1>
+    <p>Cloud Applications Architect | Java & AWS Specialist</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#terraform">Terraform</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Project</h2>
+    <p>
+      This project aims to demonstrate a complete cloud-based architecture where I can showcase some of my skills and technical experience. 
+      If you have any questions or suggestions, feel free to reach out.
+    </p>
+  
+    <p>
+      Below is the technical architecture diagram representing the desired final structure of the system:
+    </p>
+  
+    <div class="image-inline">
+      <img id="cloud-image" src="img/arch-cloud.png" alt="Cloud Architecture Diagram" />
+    </div>
+  
+    <p>
+      The idea is to have microservices running on ECS Fargate clusters that communicate with serverless components via SQS messaging. 
+      As the project evolves, new components and improvements will be added progressively.
+    </p>
+  </section>
+
+  <div id="image-modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+
+  <section id="projects">
+    <h2>Applications</h2>
+    <p>
+      The architecture below illustrates how the different applications interact through a hybrid setup composed of Fargate-based containers, 
+      serverless functions, databases, and message brokers — providing a robust and production-like environment.
+    </p>
+  
+    <div class="image-inline">
+      <img id="application-image" src="img/application.png" alt="Application Architecture Diagram" />
+    </div>
+  
+    <div class="card">
+      <h3>Trinity</h3>
+      <p>
+        A Spring Boot application running on GraalVM that registers a user into a DynamoDB table. It includes a full CI/CD pipeline implemented via GitHub Actions.
+        <br />
+        <strong>GitHub:</strong> 
+        <a href="https://github.com/kleber-portfolio/trinity" target="_blank" rel="noopener noreferrer">
+          https://github.com/kleber-portfolio/trinity
+        </a>
+      </p>
+    </div>
+  
+    <div class="card">
+      <h3>Morpheus</h3>
+      <p>
+        A GraalVM-based Spring Boot microservice that randomly assigns a blue or red pill to an existing user. It also features a GitHub Actions CI/CD workflow.
+        <br />
+        <strong>GitHub:</strong> 
+        <a href="https://github.com/kleber-portfolio/trinity" target="_blank" rel="noopener noreferrer">
+          https://github.com/kleber-portfolio/morpheus
+        </a>
+      </p>
+    </div>
+  
+    <div class="card">
+      <h3>The Oracle</h3>
+      <p>
+        A serverless Java function (running on GraalVM) that determines whether a user is “The One” — based on a randomized logic engine.
+        The project is deployed using CI/CD powered by GitHub Actions.
+        <br />
+        <strong>GitHub:</strong> 
+        <a href="https://github.com/kleber-portfolio/trinity" target="_blank" rel="noopener noreferrer">
+          https://github.com/kleber-portfolio/oracle
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <section id="terraform">
+    <h2>Infrastructure as Code</h2>
+    <p>
+      To streamline and standardize the infrastructure provisioning process, this project uses <strong>Terraform</strong> to define and deploy the entire cloud architecture.
+      The codebase is fully modularized and supports <strong>multi-environment deployments</strong> (e.g., <code>dev</code>, <code>staging</code>, and <code>prod</code>) using Terraform Workspaces.
+    </p>
+  
+    <p>
+      The infrastructure includes key AWS components such as <strong>VPC, ECS (Fargate), Lambda, API Gateway, SQS, Cognito,</strong> and <strong>Verified Permissions</strong>,
+      all provisioned through reusable and version-controlled Terraform modules.
+    </p>
+  
+    <p>
+      You can follow the Terraform implementation and architecture code here:
+      <br />
+      <strong>GitHub:</strong> 
+        <a href="https://github.com/kleber-portfolio/trinity" target="_blank" rel="noopener noreferrer">
+          https://github.com/kleber-portfolio/architect
+        </a>
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>GitHub: <a href="https://github.com/MrSpock182" target="_blank">MrSpock182</a></p>
+    <p>Email: <a href="mailto:klebernunes182@gmail.com">klebernunes182@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kleber Nunes Inacio. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
